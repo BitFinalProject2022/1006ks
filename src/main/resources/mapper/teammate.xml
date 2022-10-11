@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.showmual.dao.TeammateDao">
+	
+	<resultMap id="selectTeammateList" type="teammateVo">
+		<result property="person_id" column="person_id" />
+		<result property="name" column="name" />
+		<result property="status" column="status" />
+		<result property="lunch" column="lunch" />
+		<result property="write_date" column="write_date" />
+	</resultMap>
+	
+	<select id="selectTeammate" resultMap="selectTeammateList">
+		<![CDATA[
+			select * from teammate;
+		]]>
+	</select>
+
+</mapper>
